@@ -4,10 +4,9 @@ import java.util.Arrays;
 
 public class Main {
     /**
-     * @param args
-     * Комментарий - признак плохого запаха!
-     * Смысл в том, что в одном месте (java-файле), например для методов, перед собственно кодом
-     * описываешь стандартным образом что функция делает, какие аргументы принимает, какие результаты возвращает.
+     * @param args Комментарий - признак плохого запаха!
+     *             Смысл в том, что в одном месте (java-файле), например для методов, перед собственно кодом
+     *             описываешь стандартным образом что функция делает, какие аргументы принимает, какие результаты возвращает.
      */
     public static <string> void main(String[] args) {
         System.out.println("Hometask 2. Date 21.06.2020");
@@ -60,8 +59,9 @@ public class Main {
 //        сколько потребуется, не опасаясь увеличить ее объем.
 
         /*Это блочный комментарий:
-        * Если нужны более длинные комментарии, можно каждую строку начинать символами.
-        * Хотя более удобно ограничивать блоки комментариев разделителями*/ int IntCommentPurpose = 1;
+         * Если нужны более длинные комментарии, можно каждую строку начинать символами.
+         * Хотя более удобно ограничивать блоки комментариев разделителями*/
+        int IntCommentPurpose = 1;
 
 //todo: Задача - выучить JAVA и работать разработчиком ПО!
 
@@ -74,66 +74,67 @@ public class Main {
                 "\nЗначение в ячейках, индекс которых имеет четное значение, уменьшить на 2. " +
                 "\nВывести значение массива до изменения и после для сравнения результата. ");
 
-        int[] ints = new int[] {4,1,6,5,8,7,12,9,10,3};
+        int[] ints = new int[]{4, 1, 6, 5, 8, 7, 12, 9, 10, 3};
         System.out.println("Массив ints до изменения: " + Arrays.toString(ints));
 
         // Вывод элементов массива с нечетным индексом на экран.
-        System.out.print("\nЭлементы массива ints с нечетным индексом: ");
-        for (int i = 0; i < ints.length; i++) {
-            if(i%2 != 0){
-                System.out.print("\nнечетный индекс " + i + " = " + ints[i] + ", ");
-            }
-        }
+//
+//        System.out.print("\nЭлементы массива ints с нечетным индексом: ");
+//        for (int i = 0; i < ints.length; i++) {
+//            if (i % 2 != 0) {
+//                System.out.print("\nнечетный индекс " + i + " = " + ints[i] + ", ");
+//            }
+//        }
+//
+//        // Вывод элементов массива с четным индексом на экран.
+//        System.out.print("\nЭлементы массива ints с четным индексом: ");
+//        for (int i = 0; i < ints.length; i++) {
+//            if (i % 2 == 0) {
+//                System.out.print("\nчетный индекс " + i + " = " + ints[i] + ", ");
+//            }
+//        }
 
-        // Вывод элементов массива с четным индексом на экран.
-        System.out.print("\nЭлементы массива ints с четным индексом: ");
-        for (int i = 0; i < ints.length; i++) {
-            if(i%2 == 0){
-                System.out.print("\nчетный индекс " + i + " = " + ints[i] + ", ");
-            }
-        }
-
-        // Значение в ячейках, индекс которых имеет нечетное значение, увеличить вдвое.
-        System.out.print("\nЗначение в ячейках, индекс которых имеет нечетное значение, увеличить вдвое: ");
-        for (int i = 0; i < ints.length; i++) {
-            if(i%2 != 0){
-                System.out.print(ints[i] * 2 + ",");
-            }
-        }
-        // Значение в ячейках, индекс которых имеет четное значение, уменьшить на 2.
-        System.out.print("\nЗначение в ячейках, индекс которых имеет четное значение, уменьшить на 2: ");
-        for (int i = 0; i < ints.length; i++) {
-            if(i%2 == 0){
-                System.out.print(ints[i] / 2 + ",");
-            }
-        }
+//        // Значение в ячейках, индекс которых имеет нечетное значение, увеличить вдвое.
+//        System.out.print("\nЗначение в ячейках, индекс которых имеет нечетное значение, увеличить вдвое: ");
+//        for (int i = 0; i < ints.length; i++) {
+//            if (i % 2 != 0) {
+//                System.out.print(ints[i] * 2 + ",");
+//            }
+//        }
+//        // Значение в ячейках, индекс которых имеет четное значение, уменьшить на 2.
+//        System.out.print("\nЗначение в ячейках, индекс которых имеет четное значение, уменьшить на 2: ");
+//        for (int i = 0; i < ints.length; i++) {
+//            if (i % 2 == 0) {
+//                System.out.print(ints[i] / 2 + ",");
+//            }
+//        }
         System.out.println("\nМассив ints после изменения: ");
         for (int i = 0; i < ints.length; i++) {
-            if(i%2 != 0){
-                System.out.print(ints[i] * 2 + ",");
+            if (i % 2 != 0) {
+                ints[i] *= 2;
             }
-            if(i%2 == 0){
-                System.out.print(ints[i] / 2 + ",");
+            if (i % 2 == 0) {
+                ints[i] -= 2;
             }
-
         }
+        System.out.println("Массив ints после изменения: " + Arrays.toString(ints));
 
-      System.out.println("\nAssignment 5: completed");
+        System.out.println("\nAssignment 5: completed");
 
-      System.out.println("\nAssignment 6: Создайте многомерный массив, в котором будет 3 строки и 3 столбца. " +
+        System.out.println("\nAssignment 6: Создайте многомерный массив, в котором будет 3 строки и 3 столбца. " +
                 "Запишите в него числа от 1 до 9. \n" +
                 "Выполните с данным массивом определенные действия, чтобы числа хранились от 9 до 1. \n" +
-                "Выведите результат до и после изменения многомерного массива.\n" );
-        int [][] matrixInts = new int[3][3];
-        matrixInts [0][0] = 1;
-        matrixInts [0][1] = 2;
-        matrixInts [0][2] = 3;
-        matrixInts [1][0] = 4;
-        matrixInts [1][1] = 5;
-        matrixInts [1][2] = 6;
-        matrixInts [2][0] = 7;
-        matrixInts [2][1] = 8;
-        matrixInts [2][2] = 9;
+                "Выведите результат до и после изменения многомерного массива.\n");
+        int[][] matrixInts = new int[3][3];
+        matrixInts[0][0] = 1;
+        matrixInts[0][1] = 2;
+        matrixInts[0][2] = 3;
+        matrixInts[1][0] = 4;
+        matrixInts[1][1] = 5;
+        matrixInts[1][2] = 6;
+        matrixInts[2][0] = 7;
+        matrixInts[2][1] = 8;
+        matrixInts[2][2] = 9;
 
         System.out.println("Двумерный массив, в котором  3 строки и 3 столбца. \n" +
                 "               \n Записано числа от 1 до 9:  " + Arrays.deepToString(matrixInts));
@@ -147,15 +148,68 @@ public class Main {
             System.out.println();//перенос строки ради визуального сохранения табличной формы
         }
 
- // Вывод значений в обратном порядке:
-        System.out.println("Вывод значений в обратном порядке от 9 до 1:");
-        for (int i = matrixInts.length-1; i >= 0; i--) {
-            for (int j = matrixInts.length-1; j >= 0; j--) {
+//        // Вывод значений в обратном порядке:
+//        System.out.println("Вывод значений в обратном порядке от 9 до 1:");
+//        for (int i = matrixInts.length - 1; i >= 0; i--) {
+//            for (int j = matrixInts.length - 1; j >= 0; j--) {
+//                System.out.print(" " + matrixInts[i][j] + " ");
+//            }
+//            System.out.println();
+//        }
+//        Запись значений в обратном порядке через переменную:
+        int n = matrixInts.length;
+        int temp;
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                temp = matrixInts[i][j];
+                matrixInts[i][j] = matrixInts[n - i - 1][n - j - 1];
+                matrixInts[n - i - 1][n - j - 1] = temp;
+            }
+        }
+
+
+//        int n = matrixInts.length; //Переменная, которая будет использоваться при обмене элементов
+//        int[] temp;
+//        int[] temp2;
+//
+//        for (int i = 0; i < n / 2; i++) {
+//            for (int j = 0; j < n / 2; j++) {
+//                temp = matrixInts[n - i - 1];
+//                temp2 = matrixInts[n - j - 1];
+//                matrixInts[n - i - 1] = matrixInts[i];
+//                matrixInts[n - j - 1] = matrixInts[j];
+//
+//
+//                matrixInts[i] = temp;
+//                matrixInts[j] = temp;
+//
+//
+//            }
+//        for (int i = 0; i < n / 2; i++) {
+//            temp = matrixInts[n - i - 1];
+//            matrixInts[n - i - 1] = matrixInts[i];
+//            matrixInts[i] = temp;
+//        }
+//
+//
+//            for (int j = 0; j < n / 2; j--) {
+//                temp = matrixInts[n - j - 1];
+//                matrixInts[n - j - 1] = matrixInts[j];
+//                matrixInts[j] = temp;
+
+        //Выводим конечный массив в консоль
+        System.out.println("Измененный массив от 9 до 1:  " + Arrays.deepToString(matrixInts));
+
+        System.out.println("Измененный массив в таблице: ");
+        for (
+                int i = 0;
+                i < matrixInts.length; i++) {
+            for (int j = 0; j < matrixInts.length; j++) {
                 System.out.print(" " + matrixInts[i][j] + " ");
             }
             System.out.println();
         }
         System.out.println("Assignment 6: completed");
     }
-    }
+}
 
