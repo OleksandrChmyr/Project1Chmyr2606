@@ -15,29 +15,30 @@ public class Main {
 //        Создаем в этом классе.  Вызываем данный класс и метод.
 //        Так как метод не статический создаем экземпляр класса.
 
-//        Scanner myScan = new Scanner(System.in);
-//
-//        System.out.println("Enter your Name: ");
-//        String name = myScan.next();
-//        System.out.println("Your Name is: " + name);
-//
-//        System.out.println("Enter your Surname: ");
-//        String surname = myScan.next();
-//        System.out.println("Your Surname is: " + surname);
-//
-//        System.out.println("How old are you?: ");
-//        int age = myScan.nextInt();
-//        System.out.println("Your Age is: " + age);
-//
-//        System.out.println("Please Enter your email: ");
-//        String email = myScan.next();
-//        System.out.println("Your email is: " + email);
-//
-//        System.out.println("TelL me about yourself: ");// не останавливается на строке
-//        String story = myScan.nextLine();
-//        System.out.println("Your story is interesting: " + story);
-//
-//        System.out.println("Assignment 1: completed");
+        Scanner myScan = new Scanner(System.in);
+
+        System.out.println("Enter your Name: ");
+        String name = myScan.next();
+        System.out.println("Your Name is: " + name);
+
+        System.out.println("Enter your Surname: ");
+        String surname = myScan.next();
+        System.out.println("Your Surname is: " + surname);
+
+        System.out.println("How old are you?: ");
+        int age = myScan.nextInt();
+        System.out.println("Your Age is: " + age);
+
+        System.out.println("Please Enter your email: ");
+        String email = myScan.next();
+        System.out.println("Your email is: " + email);
+
+        System.out.println("TelL me about yourself: ");// не останавливается на строке
+        myScan.nextLine();
+        String story = myScan.nextLine();
+        System.out.println("Your story is interesting: " + story);
+
+        System.out.println("Assignment 1: completed");
 
 
         System.out.println("Assignment 2: Создайте 3 переменные типа int и 3 переменные типа double используя " +
@@ -62,17 +63,17 @@ public class Main {
                 "вы задаете количество участников и среди них производится розыгрыш). " +
                 "Используя класс Random определить победителя и вывести поздравление в консоль.");
 
-//        Scanner lotteryWinner = new Scanner(System.in);
-//        System.out.println("How many participants do we have today? Enter the number: ");
-//        int Participants = lotteryWinner.nextInt();
-//        System.out.println("Ok, we are ready to play with  " + Participants + " ladies and gentlement");
-//
-//        Random LotteryRand = new Random();
-//        int Winner = LotteryRand.nextInt(Participants);
-//        int prizesum = LotteryRand.nextInt(1000000) + 10000;
-//
-//        System.out.println("Our lucky Number today is ... " + Winner +
-//                "\n  Congratulations!!! You have won: " + prizesum + "  USD $$$$$$$$$");
+        Scanner lotteryWinner = new Scanner(System.in);
+        System.out.println("How many participants do we have today? Enter the number: ");
+        int Participants = lotteryWinner.nextInt();
+        System.out.println("Ok, we are ready to play with  " + Participants + " ladies and gentlement");
+
+        Random LotteryRand = new Random();
+        int Winner = LotteryRand.nextInt(Participants);
+        int prizesum = LotteryRand.nextInt(1000000) + 10000;
+
+        System.out.println("Our lucky Number today is ... " + Winner +
+                "\n  Congratulations!!! You have won: " + prizesum + "  USD $$$$$$$$$");
 
         System.out.println("Assignment 4: Используя класс Math напишите 7-8 примеров вызовов вспомогательных методов " +
                 "данного класса:\n" +
@@ -94,9 +95,9 @@ public class Main {
         double random = Math.random();
         System.out.println("Печатаем рандомное значение: " + random);
         double ceil = Math.ceil(8002.2);
-        System.out.println("Возвращаем наименьшее целое число, которое больше аргумента (ceil): " + ceil);
+        System.out.println("Возвращаем наименьшее целое число, которое больше аргумента (ceil): " + ceil); // Округление вверх
         double floor = Math.floor(5);
-        System.out.println("Возвращаем наибольшее целое число, которое меньше или равно аргументу (floor): " + floor);
+        System.out.println("Возвращаем наибольшее целое число, которое меньше или равно аргументу (floor): " + floor); // Округление вниз
         long round = Math.round(123.3434);
         System.out.println("Возвращаем аргумент, округлённый вверх до ближайшего числа: " + round);
 
@@ -108,6 +109,9 @@ public class Main {
                 "Для себя поймите разницу в использовании. " +
                 "Если не хотите получать маленькую зарплату, то можете выполнить дополнительные действия с Math.random)");
 
+        mySalaryrandom();
+        mySalarymathrandom();
+        System.out.println("Assignment 5: completed");
 
         System.out.println("Assignment 6: Создайте класс “Employee”, у которого будет три переменные: " +
                 "double:“salary”, String:“position”, int:”age”. " +
@@ -126,7 +130,45 @@ public class Main {
 
         System.out.println("Сравнение по ссылке  " + (Em1 == Em2));
         System.out.println("Сравнение объектов  " + (Em1.equals(Em2)));
+        System.out.println("Assignment 6: completed");
+        System.out.println("Assignment 7: Внутри нового класса создать 4 новых метода, 2 статических (static) и 2 обычных. \n" +
+                "Этих 4 метода должны выполнять 4 математических операции (сложение(+), вычитание(-), деление(/), умножение(*)). \n" +
+                "Все методы должны возвращать результат выполненной операции обратно.\n" +
+                "Необходимо чтобы 2 метода принимали и возвращали целочисленные значения, а 2 - дробные значения. \n" +
+                "В классе Main реализуйте вызовы созданных Вами новых методов. " +
+                "Запомните отличие вызовов статических и не статических методов.\n");
+// Вызываем методы из нового класса MathExample:
+//        статик - без создания экземпляра класса
+        int result1 = MathExample.calcSum(12, 24);
+        System.out.println("Математический статический метод 1: Сумма " + result1);
 
+        int result2 = MathExample.calcDiff(32, 12);
+        System.out.println("Математический статический метод 2: Вычетание " + result2);
+// не статик - создаем экземпляр класса
+        MathExample mathExample = new MathExample();
+
+        double result3 = mathExample.calcMul(121.4, 123.21);
+        System.out.println("Математический метод 3: Умножение " + result3);
+
+        double result4 = mathExample.calcDiv(123.45, 2.13);
+        System.out.println("Математический метод 4: Деление " + result4);
+
+
+        System.out.println("Assignment 7: completed");
 
     }
+
+    // создание методов для задания 5:
+    private static void mySalaryrandom() {
+        Random mySalaryrandom = new Random();
+        int salary1 = mySalaryrandom.nextInt(150000) + 50000;
+        System.out.println("Моя случайная зарплата - Random: " + salary1);
+
+    }
+
+    private static void mySalarymathrandom() {
+        double salary2 = Math.random();
+        System.out.println("Моя случайная зарплата - Math.Random: " + ((long) (salary2 * 100000)));
+    }
+
 }

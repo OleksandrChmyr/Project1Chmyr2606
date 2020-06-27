@@ -50,7 +50,9 @@ public class Main {
         double d2 = A3float1;
         double d3 = A3float2;
 // вывести сумму всех 6 переменных преобразовав к строке
-        System.out.println(Arrays.toString(new double[]{s1 + i1 + l1 + d1 + d2 + d3}));
+        String.valueOf(s1 + i1 + l1 + d1 + d2 + d3);
+        System.out.println(String.valueOf(s1 + i1 + l1 + d1 + d2 + d3));
+//        System.out.println(Arrays.toString(new double[]{s1 + i1 + l1 + d1 + d2 + d3}));
         System.out.println("Assignment 3: completed");
 
         System.out.println("Assignment 4: Создавать комментарии всех рассмотренных видов хотя бы по одному примеру;");
@@ -156,17 +158,27 @@ public class Main {
 //            }
 //            System.out.println();
 //        }
-//        Запись значений в обратном порядке через переменную:
+// Запись значений в обратном порядке через переменную:
         int n = matrixInts.length;
         int temp;
-        for (int i = 0; i < 2; i++) {
-            for (int j = 0; j < 2; j++) {
+        for (int i = 0; i < n / 2; i++) {
+            for (int j = 0; j < n / 2; j++) {
                 temp = matrixInts[i][j];
                 matrixInts[i][j] = matrixInts[n - i - 1][n - j - 1];
                 matrixInts[n - i - 1][n - j - 1] = temp;
             }
         }
+//Выводим конечный массив в консоль
+        System.out.println("Измененный массив от 9 до 1:  " + Arrays.deepToString(matrixInts));
 
+        System.out.println("Измененный массив в таблице: ");
+        for (int i = 0; i < matrixInts.length; i++) {
+            for (int j = 0; j < matrixInts.length; j++) {
+                System.out.print(" " + matrixInts[i][j] + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("Assignment 6: completed");
 
 //        int n = matrixInts.length; //Переменная, которая будет использоваться при обмене элементов
 //        int[] temp;
@@ -197,19 +209,7 @@ public class Main {
 //                matrixInts[n - j - 1] = matrixInts[j];
 //                matrixInts[j] = temp;
 
-        //Выводим конечный массив в консоль
-        System.out.println("Измененный массив от 9 до 1:  " + Arrays.deepToString(matrixInts));
 
-        System.out.println("Измененный массив в таблице: ");
-        for (
-                int i = 0;
-                i < matrixInts.length; i++) {
-            for (int j = 0; j < matrixInts.length; j++) {
-                System.out.print(" " + matrixInts[i][j] + " ");
-            }
-            System.out.println();
-        }
-        System.out.println("Assignment 6: completed");
     }
 }
 
