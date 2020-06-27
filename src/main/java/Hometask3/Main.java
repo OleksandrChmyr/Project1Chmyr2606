@@ -62,17 +62,17 @@ public class Main {
                 "вы задаете количество участников и среди них производится розыгрыш). " +
                 "Используя класс Random определить победителя и вывести поздравление в консоль.");
 
-        Scanner lotteryWinner = new Scanner(System.in);
-        System.out.println("How many participants do we have today? Enter the number: ");
-        int Participants = lotteryWinner.nextInt();
-        System.out.println("Ok, we are ready to play with  " + Participants + " ladies and gentlement");
-
-        Random LotteryRand = new Random();
-        int Winner = LotteryRand.nextInt(Participants);
-        int prizesum = LotteryRand.nextInt(1000000) + 10000;
-
-        System.out.println("Our lucky Number today is ... " + Winner +
-                "\n  Congratulations!!! You have won: " + prizesum + "  USD $$$$$$$$$");
+//        Scanner lotteryWinner = new Scanner(System.in);
+//        System.out.println("How many participants do we have today? Enter the number: ");
+//        int Participants = lotteryWinner.nextInt();
+//        System.out.println("Ok, we are ready to play with  " + Participants + " ladies and gentlement");
+//
+//        Random LotteryRand = new Random();
+//        int Winner = LotteryRand.nextInt(Participants);
+//        int prizesum = LotteryRand.nextInt(1000000) + 10000;
+//
+//        System.out.println("Our lucky Number today is ... " + Winner +
+//                "\n  Congratulations!!! You have won: " + prizesum + "  USD $$$$$$$$$");
 
         System.out.println("Assignment 4: Используя класс Math напишите 7-8 примеров вызовов вспомогательных методов " +
                 "данного класса:\n" +
@@ -82,8 +82,25 @@ public class Main {
                 " o max();\n" +
                 " o random();\n" +
                 " o ….(остальные на Ваш выбор);\n");
+// обращаемся напрямую, без создания экземпляра класса
+        double sqrt = Math.sqrt(81);
+        System.out.println("Печатаем квадратный корень числа: " + sqrt);
+        int abs = Math.abs(56);
+        System.out.println("Печатаем абсолютное значение: " + abs);
+        int min = Math.min(123, 324);
+        System.out.println("Печатаем минимальное значение: " + min);
+        int max = Math.max(12, 34);
+        System.out.println("Печатаем максимальное значение: " + max);
+        double random = Math.random();
+        System.out.println("Печатаем рандомное значение: " + random);
+        double ceil = Math.ceil(8002.2);
+        System.out.println("Возвращаем наименьшее целое число, которое больше аргумента (ceil): " + ceil);
+        double floor = Math.floor(5);
+        System.out.println("Возвращаем наибольшее целое число, которое меньше или равно аргументу (floor): " + floor);
+        long round = Math.round(123.3434);
+        System.out.println("Возвращаем аргумент, округлённый вверх до ближайшего числа: " + round);
 
-//        Math M1 = new Math();
+        System.out.println("Assignment 4: completed");
 
         System.out.println("Assignment 5: Создать 2 схожих метода, которые будут случайным образом генерировать " +
                 "Вашу зарплату. Обратите внимание, что именно метода, а не просто вызовы указанных функций. " +
