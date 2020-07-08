@@ -44,16 +44,16 @@ public class Main {
         for (int a = 0; a < randArray1.length; a++) {
             randArray1[a] = randomint1.nextInt(100);
         }
-        for (int a = 0; a < randArray1.length; a++) {
+        for (int a = 1; a < randArray1.length; a++) {// единица нужна чтобы сравнивать начиная с 0 значения индекса
             System.out.print(randArray1[a] + ", ");
         }
 
         int max = randArray1[0];
-        for (int a = 0; a < randArray1.length; a++) {
+        for (int a = 1; a < randArray1.length; a++) {
             if (max < randArray1[a])
                 max = randArray1[a];
         }
-        System.out.println("\n Maximum values is: " + max);
+        System.out.println("\n Maximum value is: " + max);
         System.out.println("Assignment 5: completed");
 
         System.out.println("\n Assignment 6: Дано 10 чисел (возможно массив). \n" +
@@ -64,30 +64,37 @@ public class Main {
         for (int b = 0; b < randArray2.length; b++) {
             randArray2[b] = randomint2.nextInt(100);
         }
-        for (int b = 0; b < randArray2.length; b++) {
+        for (int b = 1; b < randArray2.length; b++) {
             System.out.print(randArray2[b] + ", ");
         }
 
         int min = randArray2[0];
-        for (int b = 0; b < randArray2.length; b++) {
+        for (int b = 1; b < randArray2.length; b++) {// единица нужна чтобы сравнивать начиная с 0 значения индекса
             if (min > randArray2[b])
                 min = randArray2[b];
         }
-        System.out.println("\n Minimum values is: " + min);
+        System.out.println("\n Minimum value is: " + min);
         System.out.println("Assignment 6: completed");
 
         System.out.println("\n Assignment 7: Создайте переменную равную 5. " +
                 "\n Используя один из циклических оператор, напечатайте “Hillel the Best” " +
                 "пока созданная переменная меньше 0. " +
                 "Текст необходимо чтобы вывелся только один раз.\n");
-        int x = 5;
-        while (x <= 5) {
-            x--;
-            if (x < 0) {
-                System.out.println("Hillel the best");
-                break;
-            }
-        }
+
+        int var = 5;
+        do {
+            System.out.println("Hillel the best");
+        } while (var < 0);
+
+
+//        int x = 5;
+//        while (x <= 5) {
+//            x--;
+//            if (x < 0) {
+//                System.out.println("Hillel the best");
+//                break;
+//            }
+//        }
         System.out.println("Assignment 7: completed");
 
         System.out.println("\n Assignment 8: Создайте массив из 10 чисел от 1 до 10. " +
@@ -98,12 +105,12 @@ public class Main {
 
         for (int i = 0; i < intArray.length; i++) {
             if (i % 2 != 0) {
-                System.out.println(intArray[i] + " - это число четное");}
-                else {
-                    System.out.println(intArray[i] + " - это число не четное");
-                }
+                System.out.println(intArray[i] + " - это число четное");
+            } else {
+                System.out.println(intArray[i] + " - это число не четное");
             }
         }
-
     }
+
+}
 

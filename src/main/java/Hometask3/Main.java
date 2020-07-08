@@ -65,14 +65,15 @@ public class Main {
 
         Scanner lotteryWinner = new Scanner(System.in);
         System.out.println("How many participants do we have today? Enter the number: ");
-        int Participants = lotteryWinner.nextInt();
-        System.out.println("Ok, we are ready to play with  " + Participants + " ladies and gentlement");
+        int participants = lotteryWinner.nextInt();
+        System.out.println("Ok, we are ready to play with  " + participants + " ladies and gentlement");
 
-        Random LotteryRand = new Random();
-        int Winner = LotteryRand.nextInt(Participants);
-        int prizesum = LotteryRand.nextInt(1000000) + 10000;
+        Random lotteryRand = new Random();
+        int winner = lotteryRand.nextInt(participants);
+        int prizesum = lotteryRand.nextInt(1000000) + 10000;
 
-        System.out.println("Our lucky Number today is ... " + Winner +
+
+        System.out.println("Our lucky Number today is ... " + winner +
                 "\n  Congratulations!!! You have won: " + prizesum + "  USD $$$$$$$$$");
 
         System.out.println("Assignment 4: Используя класс Math напишите 7-8 примеров вызовов вспомогательных методов " +

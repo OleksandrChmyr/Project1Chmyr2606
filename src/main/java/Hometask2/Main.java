@@ -52,7 +52,7 @@ public class Main {
 // вывести сумму всех 6 переменных преобразовав к строке
         String.valueOf(s1 + i1 + l1 + d1 + d2 + d3);
         System.out.println(String.valueOf(s1 + i1 + l1 + d1 + d2 + d3));
-//        System.out.println(Arrays.toString(new double[]{s1 + i1 + l1 + d1 + d2 + d3}));
+//        System.out.println(Arrays.toString(new double[]{s1 + i1 + l1 + d1 + d2 + d3})); - неправильно
         System.out.println("Assignment 3: completed");
 
         System.out.println("Assignment 4: Создавать комментарии всех рассмотренных видов хотя бы по одному примеру;");
