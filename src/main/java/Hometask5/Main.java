@@ -88,7 +88,7 @@ public class Main {
 //        Способ 2:
         char[] array = new char[]{0x0110,0x0197,0x015E,0x0187,0x00D8,0x0056,0x0118,0x0158,0x0176};
         System.out.println("Cпособ 2: ");
-        for (char c : array) {
+        for (char c : array) { //enhanced for
             System.out.print(c);
         }
         System.out.println("\nAssignment 2: completed");
