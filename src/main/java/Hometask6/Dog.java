@@ -26,18 +26,19 @@ public class Dog {
     public String getName() {
         return name;
     }
-    public int getHeight() {
-        return height;
-    }
-    public String getBreed() {
-        return breed;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
+
+    public int getHeight() {
+        return height;
+    }
     public void setHeight(int height) {
         this.height = height;
+    }
+
+    public String getBreed() {
+        return breed;
     }
     public void setBreed(String breed) {
         this.breed = breed;
