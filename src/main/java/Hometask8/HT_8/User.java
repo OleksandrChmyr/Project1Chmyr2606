@@ -8,6 +8,8 @@ import java.nio.file.Paths;
 import java.util.Objects;
 import java.util.Scanner;
 
+
+
 public class User {
     //    1. Создайте класс User, у которого будет несколько полей(имя, фамилия, почта, пароль, пол, страна).
 //    Соблюдая принципы инкапсуляции реализуйте в нем все необходимые методы/конструкторы для дальнейшей работы
@@ -109,12 +111,15 @@ public class User {
                 ", country='" + country + '\'' +
                 '}';
     }
-
-    public static void read (String readText) {
+// 2. Так же у данного класса должно быть 2 метода: 
+//
+//а). Читать. Принимает текст, ничего не возвращает, выводит сообщение принятое в консоль.
+    public void read (String readText) {
         System.out.println(readText);
     }
 
-    public static void write () throws IOException {
+//б). Писать. Ничего не принимает, просто считывает текст с клавиатуры и сохраняет введенный текст в файл. 
+    public void write () throws IOException {
 
         Scanner scanner = new Scanner(System.in);
 
