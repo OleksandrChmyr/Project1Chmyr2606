@@ -12,7 +12,7 @@ public class Main {
 
         Support support = new Support();
         String str2 = Constants.finStr2;
-        String str3 = "Dima";
+        String str3 = "Alex";
 
         boolean delFile = support.stringVer(str3);
 
